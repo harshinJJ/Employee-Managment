@@ -80,12 +80,15 @@ const Editemployee = () => {
   }
   return (
     <div>
-      
       <div className="backcolor">
         <section class="formsection">
           <div class="form-container">
             <p class="title">Edit Employee</p>
-            <form class="form" onSubmit={(event) => handlesubmit(event)}>
+            <form
+              class="form"
+              onSubmit={(event) => handlesubmit(event)}
+              encType="multipart/formdata"
+            >
               <div class="input-group">
                 <label for="username">Email</label>
                 <input

@@ -50,6 +50,7 @@ const Employeeaddingform = () => {
   }
 
   const handlesubmit = async (event) => {
+    console.log(event);
     event.preventDefault();
     setFormError(formValidate(input));
 
@@ -63,23 +64,11 @@ const Employeeaddingform = () => {
     formData.append("f_image", input.f_image);
 
     try {
-      const response = await axios
-        .post("http://localhost:8080/employee/addingemployee", formData)
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((error) => {
-          toast.error("error", {
-            position: "bottom-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-        });
+      const response = await axios.post(
+        "http://localhost:8080/employee/addingemployee",
+        formData
+      );
+
       console.log(response);
       // if (response.status === 200) {
       //   setTimeout(() => {
@@ -124,7 +113,7 @@ const Employeeaddingform = () => {
 
           <div class="form-container">
             <p class="title">Create Employee</p>
-            <form class="form">
+            <form class="form" encType="multipart/formdata">
               <div class="input-group">
                 <label for="username">Email</label>
                 <input
@@ -255,7 +244,7 @@ const Employeeaddingform = () => {
 
               <br />
 
-              <button onClick={handlesubmit} class="sign">
+              <button type="button" onClick={handlesubmit} class="sign">
                 Create
               </button>
             </form>
