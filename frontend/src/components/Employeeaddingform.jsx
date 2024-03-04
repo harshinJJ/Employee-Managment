@@ -19,10 +19,10 @@ const Employeeaddingform = () => {
   const navigate = useNavigate();
 
   const handlechange = (event) => {
-    const { name, type, value, files } = event.target;
+    const { name, value } = event.target;
     setInput((prev) => ({
       ...prev,
-      [name]: type === "file" ? files[0] : value,
+      [name]: value,
     }));
   };
 
