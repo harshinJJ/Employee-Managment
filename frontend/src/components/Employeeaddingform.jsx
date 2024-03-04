@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Employeeaddingform = () => {
   const [formError, setFormError] = useState({});
   const [input, setInput] = useState({
-    username: "",
+    email: "",
     name: "",
     mobile: "",
     designation: "",
@@ -34,7 +34,7 @@ const Employeeaddingform = () => {
   function formValidate(values) {
     var error = {};
 
-    if (values.username === "") {
+    if (values.email === "") {
       error.username = "cant be empty";
     }
     if (values.name === "") {
@@ -113,18 +113,18 @@ const Employeeaddingform = () => {
 
           <div class="form-container">
             <p class="title">Create Employee</p>
-            <form class="form" encType="multipart/formdata">
+            <form class="form">
               <div class="input-group">
-                <label for="username">Email</label>
+                <label for="email">Email</label>
                 <input
                   type="email"
-                  style={{ borderColor: formError.username ? "red" : "" }}
-                  name="username"
+                  style={{ borderColor: formError.email ? "red" : "" }}
+                  name="email"
                   placeholder=""
                   class="inputsform"
                   onChange={handlechange}
                   onClick={() => {
-                    setFormError({ ...formError, username: "" });
+                    setFormError({ ...formError, email: "" });
                   }}
                 />
               </div>
