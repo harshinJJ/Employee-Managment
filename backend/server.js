@@ -23,7 +23,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/admin", adminRouter);
 app.use("/employee", employeeRouter);
 
-console.log("hai");
 
 app.listen(8080, () => {
   console.log("SERVER STARTED");
