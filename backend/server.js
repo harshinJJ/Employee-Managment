@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/admin", adminRouter);
 app.use("/employee", employeeRouter);
-
+console.log("hiiiiiii")
 
 app.listen(8080, () => {
   console.log("SERVER STARTED");
