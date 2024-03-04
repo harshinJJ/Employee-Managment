@@ -1,0 +1,10 @@
+.heading1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    position: relative;
+    top: 250px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}

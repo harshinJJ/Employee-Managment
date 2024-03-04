@@ -1,0 +1,41 @@
+.searchbarposiotion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #3b83fb;
+    padding-top: 20px;
+}
+.inputsform1{
+    width: auto;
+    border: solid;
+    border-color:#3b83fb;
+    outline: 0;
+    padding: 0.75rem 1rem;
+    color: black;
+  }
+.tableposition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.tablestyle{
+    border: solid;
+    border-color:#3b83fb;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.position{
+    padding: 11px 11px 11px 11px;
+    height: 20px;
+    width: 20px;
+    
+}
+.linkingpart{
+    text-decoration: none;
+}
+.imagesize{
+    width: 60px;
+}
